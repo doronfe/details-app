@@ -5,9 +5,9 @@ Applications that can store your personal details and list all the written users
 ### What I added:
 - worked on Windows 11
 - added to pyproject.toml: " psycopg2-binary = "^2.9.5" "
-- added the postgres service in docker-compose, added environment variables for the app and postgres
+- added the postgres service in docker-compose, added postgres environment variables for the app
 - installed pgadmin locally on Windows to be able to see the tables and saved data
-- modified "app.py" so that I can connect to postgres add entires to the table
+- modified "app.py" so that I can connect to postgres and add entires to the table
 - Had to replace the index.html (used copilot) since the form was saving "none"
 
 ### Requirements:
