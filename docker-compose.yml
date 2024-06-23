@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  postgres-database:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=users-details
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - elk
+
+  api-node-1:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=users-details
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres-database
+    networks:
+      - elk
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 100m
+        reservations: 
+          cpus: '0.5'
+          memory: 10m
+ 
+   # volumes:
+  #   - ./data/:/app/data/
+  #   - ./:/app/
+  # environment:
+  #   - LINKS_PATH=./data/links.json
+  #   - ELASTICSEARCH_URL=http://elasticsearch:9200
+
+  # elastic:
+  #   image: elasticsearch:7.16.2
+  #   container_name: elasticsearch
+  #   restart: always
+  #   volumes:
+  #     - ./elastic_data/:/usr/share/elasticsearch/data/
+  #   environment:
+  #     - discovery.type=single-node
+  #     - xpack.security.enabled=false
+  #   ports:
+  #     - '9200:9200'
+  #     - '9300:9300'
+  #   networks:
+  #     - elk
+  
+networks:
+
+  elk:
+    driver: bridge

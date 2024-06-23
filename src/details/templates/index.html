@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Background Video-->
+<video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="{{ url_for('static', filename='mp4/bg.mp4') }}" type="video/mp4" />
+</video>
+<!-- Masthead-->
+<div class="masthead">
+    <div class="masthead-content text-white">
+        <div class="container-fluid px-4 px-lg-0">
+            <h1 class="fst-italic lh-1 mb-4">Welcome to App</h1>
+            <p class="mb-5">Please leave your details below</p>
+            <!-- Contact Form -->
+            <form id="contactForm" method="post">
+                <!-- Name input-->
+                <div class="row input-group-newsletter">
+                    <div class="col">
+                        <input class="form-control" name="Name" type="text" placeholder="Enter full name" aria-label="Enter Full Name" required />
+                    </div>
+                </div>
+                <!-- Email address input-->
+                <div class="row input-group-newsletter">
+                    <div class="col">
+                        <input class="form-control" name="Email" type="email" placeholder="Enter email address" aria-label="Enter email address" required />
+                    </div>
+                </div>
+                <!-- Submit Button-->
+                <div class="row input-group-newsletter">
+                    <div class="col-auto">
+                        <button class="btn btn-primary" id="submitButton" type="submit">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
