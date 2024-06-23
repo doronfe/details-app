@@ -9,6 +9,7 @@ Applications that can store your personal details and list all the written users
 - installed pgadmin locally on Windows to be able to see the tables and saved data
 - modified "app.py" so that I can connect to postgres and add entires to the table
 - Had to replace the index.html (used copilot) since the form was saving "none"
+- added the pgadmin service in docker compose
 
 ### Requirements:
 
