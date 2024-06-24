@@ -19,9 +19,10 @@ while attempts < max_attempts:
         print(f"Attempt {attempts} failed with error: {e}")
         print(f"Waiting for 5 seconds before retrying...")
         sleep(5)
+        if attempts == max_attempts:
+            print("Could not connect to the database after several attempts.")
 
-if attempts == max_attempts:
-    print("Could not connect to the database after several attempts.")
+
 
 
 cur=conn.cursor()
