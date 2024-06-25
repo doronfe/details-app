@@ -36,6 +36,10 @@ kubectl get deployments
 kubectl describe pod
 kubectl explain
 
+expose service:
+kubectl expose deployment test-nginx --type="NodePort" --port 80
+
+kubectl get endpoints - check if service is assigned to a pod.
 
 
 
@@ -44,9 +48,10 @@ k8s resources:
 pod->smallest resource that can run\manage a container.
 
 
+
 look up:
 pulumi
 kind, k3d - demo of installing control plane of k8s on your pc, docker containers - immitating nodes of k8s
 replica set: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
 stateful set
-service
+k8s service
