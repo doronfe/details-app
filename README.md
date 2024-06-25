@@ -26,4 +26,14 @@ Applications that can store your personal details and list all the written users
 
 ### Setup
 - run "docker compose up --build -d"
+- go to: http://localhost:8000/ and type in name and email
+
+To see the data you entered:
+- go to: http://localhost:5050/  and enter user: admin@admin.com, password: postgres
+- click on "add new server":
+  1. in tab general -> "name" -> enter whatever you want
+  2. in tab connect -> "host name" is "postgres-database", maintance database is "postgres", 
+     username and password are both "postgres", click "save".
+  3. on the left sidebar click on "servers"->the name you entered->databases->user-details->scehmas->tables.
+     right click on details->query tool-> to see all data you entered do: "SELECT * FROM details"
 
