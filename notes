@@ -1,0 +1,52 @@
+docker compose:
+--profile - deployment environment
+it's weakness is resources, docker swarm can fix that
+
+docker alternatives:
+podman, cri-o
+
+cni - container network interface
+cri - container runtime interface
+protobuf - communication protocol
+
+k8s
+===========
+kublet - read...
+howtoforge - tutorials for k8s (k3s is rancher)
+
+
+k3s
+======================
+install k3s.io
+
+sometimes you need to do "sudo systemctl daemo-reload" after changing services
+kubectl get nodes
+(if it doesn't work)export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+
+
+kubectl get pods -A (returns list of pods)
+kubectl get pods
+kubectl get nodes -o wide
+kubectl get nodes -o yaml
+kubectl describe nodes 
+kubectl get pods -A -o wide
+kubectl create deployment --image=nginx test-nginx
+kubectl create deployment --image=nginx test-nginx --dry-run=client -o yaml
+kubectl get deployments
+kubectl describe pod
+kubectl explain
+
+
+
+
+
+k8s resources:
+pod->smallest resource that can run\manage a container.
+
+
+look up:
+pulumi
+kind, k3d - demo of installing control plane of k8s on your pc, docker containers - immitating nodes of k8s
+replica set: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+stateful set
+service
