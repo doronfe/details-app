@@ -80,5 +80,7 @@ when init is done, on the server you do "join" with the hash you recieved, the "
 
 
 systmclt stop k3s
-better: systemctl disable --now
+better: systemctl disable --now k3s
+
+kubectl get nodes
 
