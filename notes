@@ -77,8 +77,9 @@ kubeadm init (look at the link in telegram for control plane...)
 when init is done, on the server you do "join" with the hash you recieved, the "join" command is generated at the end of the "kubeadm init"
 
 
-kubeadm join 10.0.2.15:6443 --token lm4yeq.ir9b24mm5lovkjmi \
-	--discovery-token-ca-cert-hash sha256:17c989ad3efb4aa9a109212ae28f5eec09e3572f49c03cebcc94815f4186d7ce 
+kubeadm join 10.0.2.15:6443 --token xubfqs.d969wzlum73ylfws \
+	--discovery-token-ca-cert-hash sha256:fd75a7d84a8fa64dd9ee0328b01ddda72c9cfcf172f018fc289ac70290d33995 
+
 
 
 systmclt stop k3s
