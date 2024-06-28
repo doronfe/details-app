@@ -55,3 +55,30 @@ kind, k3d - demo of installing control plane of k8s on your pc, docker container
 replica set: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
 stateful set
 k8s service
+
+
+June28:
+vagrant - vagrantup.com, work with local\remote virtual machines (not a must, we worked without it)
+
+connecting one machine to the other:
+using SSH:
+from physical image to virtual
+run ssh on the machine you need
+get apt openssh....
+kubeadm
+kubectl
+kubelet
+
+kubectl from k3s is not the full kubectl! that's why you need to download full kubectl
+
+commands:
+kubeadm init (look at the link in telegram for control plane...)
+
+when init is done, on the server you do "join" with the hash you recieved, the "join" command is generated at the end of the "kubeadm init"
+
+
+
+
+systmclt stop k3s
+better: systemctl disable --now
+
