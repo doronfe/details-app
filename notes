@@ -76,9 +76,9 @@ kubeadm init (look at the link in telegram for control plane...)
 
 when init is done, on the server you do "join" with the hash you recieved, the "join" command is generated at the end of the "kubeadm init"
 
-
-kubeadm join 10.0.2.15:6443 --token xubfqs.d969wzlum73ylfws \
-	--discovery-token-ca-cert-hash sha256:fd75a7d84a8fa64dd9ee0328b01ddda72c9cfcf172f018fc289ac70290d33995 
+old:
+#kubeadm join 10.0.2.15:6443 --token xubfqs.d969wzlum73ylfws \
+#	--discovery-token-ca-cert-hash sha256:fd75a7d84a8fa64dd9ee0328b01ddda72c9cfcf172f018fc289ac70290d33995 
 
 
 
@@ -87,3 +87,7 @@ better: systemctl disable --now k3s
 
 kubectl get nodes
 
+
+new:
+kubeadm join 10.0.2.15:6443 --token 0cmu05.bwve2gcm25cju3ce \
+	--discovery-token-ca-cert-hash sha256:c8fbe7f041f7949142605a1d3bc0e34d3124d528f935c29a4a39e6ef2a5df34e 
