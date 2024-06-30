@@ -90,6 +90,6 @@ kubectl get nodes
 
 new:
 
-kubeadm join 10.0.2.15:6443 --token z4hbx7.won2otn8q0ojsd7z \
-	--discovery-token-ca-cert-hash sha256:9975b920b94e4f08f4683e416b34f7cda154f7a3de40d53c885fcea17b4ca445 
+kubeadm join 10.0.2.15:6443 --token kcvsld.hdnsawuzwqwa88gp \
+	--discovery-token-ca-cert-hash sha256:7aa9b0facbc72ea4088a3cffe841cd362facbae362affe1dcf52a79275e769aa
 
