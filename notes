@@ -93,3 +93,7 @@ new:
 kubeadm join 10.0.2.15:6443 --token kcvsld.hdnsawuzwqwa88gp \
 	--discovery-token-ca-cert-hash sha256:7aa9b0facbc72ea4088a3cffe841cd362facbae362affe1dcf52a79275e769aa
 
+
+Ansible:
+https://gitlab.com/vaiolabs-io
+
