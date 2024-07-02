@@ -97,3 +97,5 @@ kubeadm join 10.0.2.15:6443 --token kcvsld.hdnsawuzwqwa88gp \
 Ansible:
 https://gitlab.com/vaiolabs-io
 
+practice in page 38
+multi (datacenter) practice in 45
