@@ -1,3 +1,27 @@
+ansible modules:
+mike42.me/blog/2019-01-the-top-100-ansible-modules
+
+docs.ansible.com for ansible documentation
+
+
+ansible yml:
+
+# Every YAML file should start with three dashes 
+---
+
+# Every YAML file file should end with three dots
+...
+
+homework:
+
+page 64 in ansible presentation
+
+do 74 and 79 from presentation
+
+
+
+
+
 docker compose:
 --profile - deployment environment
 it's weakness is resources, docker swarm can fix that
