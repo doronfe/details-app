@@ -1,3 +1,10 @@
+August 2:
+
+generate a secret in github ->setting -> developer settings
+generic webhook trigger - plugin to add the secret
+use the webhook in github with the address of the pipeline in jenkins that we generate with ngrok.
+
+
 July 30:
 
 homework:
